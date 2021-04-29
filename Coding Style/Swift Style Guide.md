@@ -303,8 +303,8 @@ let numberOfRows: Int = 5
 ```
 
 ```swift
-let basePath = "https://bottlerocketstudios.com" // String
-let fullPath = (basePath as NSString).appendingPathComponent("contact") // String
+let basePath = "https://strides.dev" // String
+let fullPath = (basePath as NSString).appendingPathComponent("podcast") // String
 ```
 
 #### Do Not
@@ -315,8 +315,8 @@ let numberOfRows: NSInteger = 5
 ```
 
 ```swift
-let basePath = NSString(string: "https://bottlerocketstudios.com") // NSString
-let fullPath = basePath.appendingPathComponent("contact") // String
+let basePath = NSString(string: "https://strides.dev") // NSString
+let fullPath = basePath.appendingPathComponent("podcast") // String
 ```
 
 ### Extensions and Protocol Conformance
@@ -676,7 +676,7 @@ var foo = ...
 
 * Make sure the class you are using this for actually needs to be a singleton. Odds are, it doesn't.
 * Prefer the name `shared` for the singleton instance as opposed to `sharedInstance`, `sharedClassName`, etc.
-* While there are several ways to create a singleton in Swift, the most concise method described below should be preferred on all Bottle Rocket projects.
+* While there are several ways to create a singleton in Swift, the most concise method described below should be preferred on all Strides Developmnet projects.
 
 #### Do
 
