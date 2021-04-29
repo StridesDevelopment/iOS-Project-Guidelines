@@ -1,6 +1,6 @@
 # Swift Style Guide
 
-This iOS Swift Style Guide is intended to define the styles and guidelines used by Bottle Rocket iOS developers when writing code in Swift. The main goal is to promote a clean, consistent style of writing code that ensures the maintainability, consistency and ease of developer collaboration within our organization. All code written at Bottle Rocket should adhere to the standards defined herein, unless a specific need to violate these guidelines arises.
+This iOS Swift Style Guide is intended to define the styles and guidelines used by Stides Development iOS developers when writing code in Swift. The main goal is to promote a clean, consistent style of writing code that ensures the maintainability, consistency and ease of developer collaboration within our organization. All code written at Stides Development should adhere to the standards defined herein, unless a specific need to violate these guidelines arises.
 
 Where any ambiguity exists in the standards, we default to the Apple standards and guidelines. Apple conventions are strongly encouraged.
 
