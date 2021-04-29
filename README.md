@@ -1,1 +1,1 @@
-# iOS-App-s-Project-Structure
+# iOS-Project-Structure
