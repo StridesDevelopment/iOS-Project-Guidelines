@@ -4,7 +4,6 @@ This iOS Swift Style Guide is intended to define the styles and guidelines used 
 
 Where any ambiguity exists in the standards, we default to the Apple standards and guidelines. Apple conventions are strongly encouraged.
 
-For any styling concerns not covered by our [SwiftLint configuration](https://gist.github.com/tylermilner/f33e33e3b4f23d8c6b2fdd4f87af98a1), refer to the notes below. If you see something missing, then please open an issue or pull request!
 
 ## Architecture
 
