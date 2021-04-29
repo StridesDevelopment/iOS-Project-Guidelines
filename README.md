@@ -1,1 +1,2 @@
-# iOS-Project-Structure
+# iOS-Project-Guidelines
+
