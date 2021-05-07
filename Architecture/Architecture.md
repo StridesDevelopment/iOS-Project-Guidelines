@@ -22,7 +22,7 @@ We **rarely** use the Apple-provided view controller templates (`UITableViewCont
 
 ### Data Sources and Delegates
 
-The data source and delegate methods for table and collection views should not be implemented by the view controller. Instead, separate "table/collection controller" objects should be created for the task. This prevents table/collection view details from polluting your view controller, which leads to better separation of concerns and greatly simplifies its responsibilities.
+The data source and delegate methods for table and collection views should be implemented in their own extensions on the view controller that will be using them. By conforming to protocols this way, it keeps code separated and clear.
 
 ## Model Objects
 
@@ -32,7 +32,7 @@ Data received from external APIs is almost always JSON. We prefer to to convert 
 
 ### Classes vs Structs
 
-We generally prefer pure Swift structs due to their value-typed nature and ability of the Swift compiler to automatically generate the [memberwise initializer](https://docs.swift.org/swift-book/LanguageGuide/Initialization.html#ID214).
+Although classes may be necessary at times, we generally prefer pure Swift structs due to their value-typed nature and ability of the Swift compiler to automatically generate the [memberwise initializer](https://docs.swift.org/swift-book/LanguageGuide/Initialization.html#ID214).
 
 ## Protocols
 

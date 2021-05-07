@@ -41,20 +41,4 @@ In addition to making debugging easier, breakpoints can provide a useful safety 
 
 ### Sanitizers
 
-Sanitizers also exist to help you catch run-time issues.
-
-#### Address Sanitizer
-
-The [Address Sanitizer](https://developer.apple.com/documentation/code_diagnostics/address_sanitizer) (ASan) is an LLVM based tool for detecting memory corruptions and other memory errors at run-time. [Enable ASan](https://developer.apple.com/documentation/code_diagnostics/address_sanitizer/enabling_the_address_sanitizer) in your app's scheme.
-
-#### Thread Sanitizer
-
-The [Thread Sanitizer](https://developer.apple.com/documentation/code_diagnostics/thread_sanitizer) (TSan) is an LLVM based tool for detecting race conditions at run-time. [Enable TSan](https://developer.apple.com/documentation/code_diagnostics/thread_sanitizer/enabling_the_thread_sanitizer) in your app's scheme.
-
-#### Undefined Behavior Sanitizer
-
-The [Undefined Behavior Sanitizer](https://developer.apple.com/documentation/code_diagnostics/undefined_behavior_sanitizer) (UBSan) is an LLVM tool for detecting undefined behavior at run-time. These are things like dividing by zero, loading memory from a misaligned pointer, or dereferencing a null pointer. [Enable UBSan](https://developer.apple.com/documentation/code_diagnostics/undefined_behavior_sanitizer/enabling_the_undefined_behavior_sanitizer) in your app's scheme.
-
-#### Main Thread Checker
-
-The [Main Thread Checker](https://developer.apple.com/documentation/code_diagnostics/main_thread_checker) is a tool that detects when AppKit/UIKit APIs are called on a background thread (which often leads to unexpected behavior). By default, the Main Thread Checker is enabled in your app's scheme when you debug your app using Xcode.
+You can also make use of [Sanitizers](https://developer.apple.com/documentation/xcode/diagnosing-memory-thread-and-crash-issues-early) to help catch run-time issues.

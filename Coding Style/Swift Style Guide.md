@@ -186,6 +186,7 @@ class ViewController: UIViewController {
 
 * Optionals are what inherently allow apps written in Swift to achieve a much lower crash rate than their counterpart written in Objective-C.
 * [Forced unwrapping](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html#ID332) of optionals is not permitted. Instead, proper error handling should be employed through the use of a safe unwrapping mechanism like `guard`, `if let`, [optional chaining](https://docs.swift.org/swift-book/LanguageGuide/OptionalChaining.html), or [nil-coalescing](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID72).
+* Where a crash should be allowed to happen (so the app doesn't continue with unexpected behavior that could lead to other issues), make use of `fatalError()`. Include a clear message as to the reason and location of the crash.
 
 #### Do
 
@@ -208,6 +209,16 @@ if let text = someOptional {
 var someOptional: String?
 
 titleLabel.text = someOptional ?? "default value"
+```
+
+```swift
+override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? CustomCell else {
+        fatalError("Failed to load a CustomCell in class MyClass.")
+    }
+
+    return cell
+}
 ```
 
 #### Do Not
@@ -676,6 +687,7 @@ var foo = ...
 
 * Make sure the class you are using this for actually needs to be a singleton. Odds are, it doesn't.
 * Prefer the name `shared` for the singleton instance as opposed to `sharedInstance`, `sharedClassName`, etc.
+* Use a private initializer so that the class can only be instantiated once, by itself.
 * While there are several ways to create a singleton in Swift, the most concise method described below should be preferred on all Strides Developmnet projects.
 
 #### Do
@@ -684,7 +696,7 @@ var foo = ...
 class MyClass() {
     static let shared = MyClass()
 
-    init() {
+    private init() {
         // ...
     }
 }
